@@ -17,8 +17,7 @@ print('Web Servo')
 
 print('<form action="" method="post">')
 print('<p>')
-print('angleÅF')
-print('<input type="number" name="angle">')
+print('angleÅF<input type="number" name="angle" value="0">')
 print('</p>')
 print('<input type="submit" value="submit">')
 print('</form>')
@@ -31,6 +30,6 @@ form = cgi.FieldStorage()
 angle = form.getvalue("angle")
 
 servo = GPIO.PWM(2, 50)
-servo.start(angle)
+servo.start(float(angle))
 
 
