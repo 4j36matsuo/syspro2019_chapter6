@@ -17,10 +17,10 @@ print('Web Servo')
 
 print('<form action="" method="post">')
 print('<p>')
-print('角度：')
-print('input type="number" name="angle"')
+print('angle：')
+print('<input type="number" name="angle">')
 print('</p>')
-print('<input type="submit" value="送信">')
+print('<input type="submit" value="submit">')
 print('</form>')
 
 
