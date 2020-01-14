@@ -1,9 +1,9 @@
 #!/usr/bin/env python
 
+import cgi
+import cgitb    #display CGI error on browser
 import time
 import RPi.GPIO as GPIO
-import cgi
-import cgitb
 
 
 def setservo(range):
@@ -15,22 +15,22 @@ def setservo(range):
 print('Content-type: text/html; charset=UTF-8\r\n')
 print('Web Servo')
 
-#print('<form action="" method="post">')
-#print('<p>')
-#print('AngleÅF')
-#print('<input type="number" name="angle" value="0">')
-#print('</p>')
-#print('<input type="submit" value="submit">')
-#print('</form>')
+print('<form action="" method="post">')
+print('<p>')
+print('AngleÅF')
+print('<input type="number" name="angle" value="0">')
+print('</p>')
+print('<input type="submit" value="submit">')
+print('</form>')
 
 
-#GPIO.setmode(GPIO.BCM)
-#GPIO.setup(2, GPIO.OUT)
+GPIO.setmode(GPIO.BCM)
+GPIO.setup(2, GPIO.OUT)
 
-#form = cgi.FieldStorage()
-#angle = form.getvalue("angle")
+form = cgi.FieldStorage()
+angle = form.getvalue("angle")
 
-#servo = GPIO.PWM(2, 50)
-#servo.start(float(angle))
+servo = GPIO.PWM(2, 50)
+servo.start(float(angle))
 
 
