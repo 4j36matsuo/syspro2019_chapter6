@@ -15,13 +15,13 @@ def setservo(range):
 print('Content-type: text/html; charset=UTF-8\r\n')
 print('Web Servo')
 
-print('<form action="" method="post">')
-print('<p>')
-print('AngleÅF')
-print('<input type="number" name="angle" value="0">')
-print('</p>')
-print('<input type="submit" value="submit">')
-print('</form>')
+#print('<form action="" method="post">')
+#print('<p>')
+#print('AngleÅF')
+#print('<input type="number" name="angle" value="0">')
+#print('</p>')
+#print('<input type="submit" value="submit">')
+#print('</form>')
 
 
 #GPIO.setmode(GPIO.BCM)
