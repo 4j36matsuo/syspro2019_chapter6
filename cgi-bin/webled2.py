@@ -6,27 +6,31 @@ import time
 import RPi.GPIO as GPIO
 
 
+def setservo(range):
+	if -90.0<=range<=90.0:
+		duty=2.5+(range+90)*(12.0-2.5)/180
+		servo.ChangeDutyCycle(duty)
+		
+		
 print('Content-type: text/html; charset=UTF-8\r\n')
-print('Web LED')
+print('Web Servo')
 
 print('<form action="" method="post">')
-print('<input type="submit" name="led" value="ON">')
-print('<input type="submit" name="led" value="OFF">')
+print('<p>')
+print('Angle：')
+print('<input type="number" name="angle" value="0">')
+print('</p>')
+print('<input type="submit" value="submit">')
 print('</form>')
 
 
 GPIO.setmode(GPIO.BCM)
-GPIO.setup(14, GPIO.OUT)
+GPIO.setup(2, GPIO.OUT)
 
 form = cgi.FieldStorage()
-value = form.getvalue("led")
+angle = form.getvalue("angle")
 
-if value == 'ON':
-	GPIO.output(14, GPIO.HIGH)
-	print('LED ON')
-
-elif value == 'OFF':
-	GPIO.output(14, GPIO.LOW)
-	print('LED OFF')
+servo = GPIO.PWM(2, 50)
+servo.start(float(angle))
 
 
