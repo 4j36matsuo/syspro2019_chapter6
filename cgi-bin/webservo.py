@@ -17,7 +17,7 @@ print('Web Servo')
 
 print('<form action="" method="post">')
 print('<p>')
-print('angleF<input type="number" name="angle" value="0">')
+print('<input type="number" name="angle" value="0">')
 print('</p>')
 print('<input type="submit" value="submit">')
 print('</form>')
