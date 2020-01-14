@@ -17,19 +17,20 @@ print('Web Servo')
 
 print('<form action="" method="post">')
 print('<p>')
+print('AngleÅF')
 print('<input type="number" name="angle" value="0">')
 print('</p>')
 print('<input type="submit" value="submit">')
 print('</form>')
 
 
-GPIO.setmode(GPIO.BCM)
-GPIO.setup(2, GPIO.OUT)
+#GPIO.setmode(GPIO.BCM)
+#GPIO.setup(2, GPIO.OUT)
 
-form = cgi.FieldStorage()
-angle = form.getvalue("angle")
+#form = cgi.FieldStorage()
+#angle = form.getvalue("angle")
 
-servo = GPIO.PWM(2, 50)
-servo.start(float(angle))
+#servo = GPIO.PWM(2, 50)
+#servo.start(float(angle))
 
 
