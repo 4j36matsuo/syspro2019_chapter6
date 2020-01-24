@@ -32,6 +32,7 @@ form = cgi.FieldStorage()
 angle = form.getvalue("angle")
 
 setservo(int(angle))
+time.sleep(1,0)
 
 print('Motor set to ')
 print(int(angle))
