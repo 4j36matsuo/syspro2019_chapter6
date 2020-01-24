@@ -34,5 +34,3 @@ angle = form.getvalue("angle")
 setservo(int(angle))
 
 print('Motor set to '+angle)
-
-
